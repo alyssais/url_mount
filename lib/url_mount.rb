@@ -24,10 +24,6 @@ class UrlMount
     @local_segments || parse_local_segments
   end
 
-  def variables
-    required_variables + local_variables
-  end
-
   def required_variables
     @required_variables ||= begin
       required_variable_segments.map{|s| s.name}
